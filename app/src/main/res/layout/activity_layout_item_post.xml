@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".HomeActivity">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:id="@+id/rlTop"
+       android:layout_height="52dp"
+       android:layout_marginLeft="14dp"
+       android:layout_marginRight="14dp"
+       android:orientation="horizontal"
+       android:background="@android:color/darker_gray">
+
+       <com.facebook.drawee.view.SimpleDraweeView
+           android:id="@+id/sdvImage"
+           android:layout_width="30dp"
+           android:layout_height="30dp"
+           android:layout_marginTop="11dp"
+           android:layout_alignParentLeft="true"
+           fresco:placeholderImage="@drawable/gray_oval" />
+       
+       <TextView
+           android:layout_width="150dp"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="11dp"
+           android:layout_marginLeft="8dp"
+           android:layout_toRightOf="@id/sdvImage"
+           android:textSize="14dp"
+           android:fontFamily="sans-serif-medium"
+           android:textColor="@color/blue_text"
+           android:id="@+id/tvUserName"
+           android:textStyle="bold"/>
+
+       <TextView
+           android:layout_width="80dp"
+           android:layout_height="20dp"
+           android:layout_marginTop="11dp"
+           android:id="@+id/tvDate"
+           android:layout_alignParentRight="true"
+           android:layout_alignParentEnd="true" />
+   </RelativeLayout>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdvBigImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        fresco:placeholderImage="@drawable/gray_rectangle"
+        android:layout_below="@+id/rlTop"
+        android:layout_alignLeft="@+id/rlTop"
+        android:layout_alignStart="@+id/rlTop"
+        android:layout_alignRight="@+id/rlTop"
+        android:layout_alignEnd="@+id/rlTop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rlBottom"
+        android:layout_below="@+id/sdvBigImage"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/rlTop"
+        android:layout_alignStart="@+id/rlTop"
+        android:layout_alignRight="@+id/rlTop"
+        android:layout_alignEnd="@+id/rlTop">
+        
+        <TextView
+            android:drawableLeft="@drawable/ic_small_heart_filled"
+            android:id="@+id/tvLikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="14dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/blue_text"
+            android:drawablePadding="5dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif"
+            android:layout_below="@+id/tvLikes" />
+
+        <TextView
+            android:id="@+id/tvHashtag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/tvComment"/>
+
+        <LinearLayout
+            android:id="@+id/llComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvHashtag"
+            android:orientation="vertical">
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/all_comments"
+        android:id="@+id/btnAllComments"
+        android:layout_below="@+id/rlBottom"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tvMediaId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlBottom"
+        android:layout_alignLeft="@+id/rlBottom"
+        android:visibility="invisible"/>
+
+
+
+</RelativeLayout>
