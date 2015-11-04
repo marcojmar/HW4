@@ -19,7 +19,7 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented user stories:
 
-![Imgur](http://i.imgur.com/dxLxOW8.gi://drive.google.com/file/d/0B647qO1uSNe7UEZySDdnczd4SUU/view?usp=sharing)
+<a href="https://drive.google.com/file/d/0B647qO1uSNe7UEZySDdnczd4SUU/view?usp=sharing" target="_blank">Persistent Video Walkthrough<a/>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
